@@ -11,7 +11,7 @@ I turn manual business processes into working automated systems — LLM agents a
 
 **Build LLM agents that do real work.** LangChain / LangGraph orchestration, tool routing, RAG pipelines, multimodal calls. The interesting part isn't the prompt — it's designing tool boundaries and fallback paths so the agent *fails explicitly* instead of hallucinating when a tool returns nothing usable.
 
-**Wire AI into enterprise systems.** REST/GraphQL, OAuth 2.0, webhooks, API gateways. I've replaced a recurring manual export process at an enterprise client with an automated ERP extraction pipeline over the NetSuite REST API — SuiteQL queries, OAuth 2.0 auth, and monthly chunking to work around record-count limits.
+**Give agents real tools, not toy ones.** Wrapping live external APIs as agent tools means handling the unglamorous parts: rate limits, auth, partial failures, and the difference between a call that broke and a call that legitimately returned nothing. In the Spatial Omics Copilot that meant Enrichr, NCBI Gene, and PubMed behind a structured tool interface with an explicit call budget.
 
 **Ship the whole product.** Next.js and React Native front ends, Node.js + PostgreSQL back ends, Stripe payments, production deploys, and the support retainer afterwards. Two published iOS apps.
 
@@ -48,8 +48,6 @@ One bug worth keeping: an early router matched terms as prefixes, so `"color"` m
 
 **Ebosi NEMT platform** — Non-emergency medical transport, architected and shipped end to end: two published iOS apps (rider + driver), Next.js admin dashboards, Node.js APIs, Stripe payments, and a PostgreSQL/Supabase backend. Scoped directly with the client, deployed to production, maintained under a support retainer.
 
-**Automated ERP data extraction pipeline** — Replaced a recurring manual export for an enterprise client. SuiteQL over the NetSuite REST API with OAuth 2.0, webhooks, and monthly chunking to stay under record-count limits. Also scoped ERP migration and compliance workstreams (Odoo, NetSuite, CMMC) by mapping how the client's operations actually ran, then converting that into a phased technical roadmap.
-
 **MDAMCR — automated multimodal data pipeline** *(Computational Biomedicine Lab, UH)* — A fully local AI pipeline (Whisper, LLaMA 3.2, LLaVA) automating transcription, entity extraction, and classification across 50+ case records. Evaluated output quality with B-cubed F1 and pairwise precision/recall.
 
 ---
@@ -78,7 +76,7 @@ One bug worth keeping: an early router matched terms as prefixes, so `"color"` m
 
 **Data & infra** PostgreSQL · MySQL · MongoDB · Supabase · Firebase · Docker · GitHub Actions · AWS · PySpark · scikit-learn · PyTorch
 
-**Integrations** REST · GraphQL · OAuth 2.0 · webhooks · NetSuite (SuiteQL / REST) · Odoo · Stripe · Twilio
+**Integrations** REST · GraphQL · OAuth 2.0 · webhooks · Stripe · Twilio
 
 ---
 
