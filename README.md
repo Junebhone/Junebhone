@@ -1,7 +1,7 @@
 # Bhone Kyaw Si Hein
 
 **AI & automation engineer with production full-stack experience.**
-I turn manual business processes into working automated systems — LLM agents and orchestration layers built on top of real enterprise data, shipped end to end.
+I build LLM agents and orchestration layers that automate real work — and ship the products around them, end to end.
 
 📍 Houston, TX &nbsp;·&nbsp; 🎓 M.S. Engineering Data Science & AI, University of Houston (Dec 2026) &nbsp;·&nbsp; 💼 **Open to AI / ML engineering and automation roles**
 
