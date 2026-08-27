@@ -29,6 +29,21 @@ I turn manual business processes into working automated systems — LLM agents a
 | **[Estify](https://github.com/Junebhone/Estify)** | Laravel classified-ads marketplace. Every listing sits inside two independent three-level hierarchies — category/subcategory/childcategory and country/state/city — with a role-gated admin panel over both and FilePond uploads that validate and orient photos client-side. <br>`Laravel` · `Jetstream` · `Tailwind` · `Alpine.js` |
 | **[mini-corebanking](https://github.com/Junebhone/mini-corebanking)** | Core-banking prototype built during my internship at uab bank — customer onboarding, account lifecycle, deposit/withdraw/transfer workflows, and reporting over a normalised MySQL schema. <br>`PHP` · `MySQL` · `Tailwind` |
 
+### Team projects
+
+**[Spatial Omics Copilot](https://github.com/alexthefirst99/Spatial-Omics-Copilot)** — a RAG chatbot that lets researchers query spatial transcriptomics data in plain English. Built by a team of 6; I'm the second-largest contributor and **own the agent layer** (`src/rag/copilot_agent/`).
+
+What I built there:
+
+- **LangGraph orchestration and a deterministic router.** The router picks which evidence tools a question needs — pathway enrichment, NCBI Gene annotation, PubMed — from the question alone. I made it rule-based rather than LLM-driven on purpose: every tool does live network I/O, the agent is capped at five tool calls per turn, and a mis-parsed instruction shouldn't be allowed to spend that budget. It's also the only way routing decisions stay assertable in tests without a live model.
+- **Tool boundaries that fail honestly.** Each tool returns a structured outcome that distinguishes *"the call failed"* from *"the call succeeded and found nothing"* — so the agent reports an empty result instead of narrating one.
+- **Multimodal payload construction and the DeepInfra client**, plus semantic re-ranking of retrieved abstracts against the question.
+- **The agent test suite**, and a round of fixes resolving 10 findings from an adversarial review.
+
+One bug worth keeping: an early router matched terms as prefixes, so `"color"` matched **"colorectal"** — silently routing questions about the project's own demo tissue down the image branch and running no evidence tools at all. Inflections are now listed explicitly. More typing, far fewer surprises.
+
+`Python` · `LangGraph` · `LangChain` · `DeepInfra` · Enrichr / NCBI Gene / PubMed
+
 ### Client & research work (private repositories)
 
 **Ebosi NEMT platform** — Non-emergency medical transport, architected and shipped end to end: two published iOS apps (rider + driver), Next.js admin dashboards, Node.js APIs, Stripe payments, and a PostgreSQL/Supabase backend. Scoped directly with the client, deployed to production, maintained under a support retainer.
@@ -36,8 +51,6 @@ I turn manual business processes into working automated systems — LLM agents a
 **Automated ERP data extraction pipeline** — Replaced a recurring manual export for an enterprise client. SuiteQL over the NetSuite REST API with OAuth 2.0, webhooks, and monthly chunking to stay under record-count limits. Also scoped ERP migration and compliance workstreams (Odoo, NetSuite, CMMC) by mapping how the client's operations actually ran, then converting that into a phased technical roadmap.
 
 **MDAMCR — automated multimodal data pipeline** *(Computational Biomedicine Lab, UH)* — A fully local AI pipeline (Whisper, LLaMA 3.2, LLaVA) automating transcription, entity extraction, and classification across 50+ case records. Evaluated output quality with B-cubed F1 and pairwise precision/recall.
-
-**Spatial Omics Copilot** *(research team of 6 engineers)* — Owned the LangGraph orchestration layer of a RAG chatbot that lets researchers query spatial transcriptomics data in plain English: tool definitions, routing between vector retrieval / live dataset queries / image-based answers, and multimodal prompt construction served via DeepInfra.
 
 ---
 
