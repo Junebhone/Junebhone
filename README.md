@@ -3,7 +3,7 @@
 **AI & automation engineer with production full-stack experience.**
 I build LLM agents and orchestration layers that automate real work — and ship the products around them, end to end.
 
-📍 Houston, TX &nbsp;·&nbsp; 🎓 M.S. Engineering Data Science & AI, University of Houston (Dec 2026) &nbsp;·&nbsp; 💼 **Open to AI / ML engineering and automation roles**
+📍 Houston, TX &nbsp;·&nbsp; 🌐 [bhonekyawsihein.tech](https://bhonekyawsihein.tech) &nbsp;·&nbsp; 🎓 M.S. Engineering Data Science & AI, University of Houston (Dec 2026) &nbsp;·&nbsp; 💼 **Open to AI / ML engineering and automation roles**
 
 ---
 
@@ -88,4 +88,4 @@ Graduating **December 2026** and open to full-time AI/ML engineering, automation
 
 ## Reach me
 
-[LinkedIn](https://www.linkedin.com/in/bhonekyawsihein) &nbsp;·&nbsp; [bhonekyawsihein@gmail.com](mailto:bhonekyawsihein@gmail.com)
+[bhonekyawsihein.tech](https://bhonekyawsihein.tech) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/bhonekyawsihein) &nbsp;·&nbsp; [bhonekyawsihein@gmail.com](mailto:bhonekyawsihein@gmail.com)
